@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио — Максим Варфоломеев</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
+
+    :root {
+      --bg: #f5f7fa;
+      --text: #333;
+      --primary: #1a73e8;
+      --secondary: #5f6368;
+      --card-bg: #fff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Rubik', sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(120deg, #e3f2fd, #f9f9f9);
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: var(--secondary);
+      font-size: 1.1em;
+    }
+
+    section {
+      max-width: 800px;
+      background: var(--card-bg);
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      color: var(--primary);
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.05em;
+      color: var(--text);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "🔥 ";
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--secondary);
+      font-size: 0.9em;
+    }
+
+    .meme-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .meme-gallery img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .meme-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      section { margin: 20px; }
+      .meme-gallery img { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Максим Варфоломеев</h1>
+  <p>💻 Веб-разработчик и Dota 2 энтузиаст</p>
+</header>
+
+<section>
+  <h2>Обо мне</h2>
+  <p>Привет! Я Максим, веб-разработчик с чувством юмора и любовью к чистому коду.  
+  Если мой сайт не ломается — значит, я забыл что-то добавить 😅</p>
+</section>
+
+<section>
+  <h2>Навыки</h2>
+  <ul>
+    <li>HTML, CSS, JavaScript (и немного магии)</li>
+    <li>React, Python, Flask, FastAPI</li>
+    <li>Git, GitHub, Docker</li>
+    <li>Умение загуглить быстрее всех</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Проекты</h2>
+  <ul>
+    <li><strong>Battle Resume</strong> — сайт-портфолио с геймерской атмосферой 🎮</li>
+    <li><strong>CoffeeBot</strong> — Telegram-бот, напоминающий выпить кофе ☕</li>
+    <li><strong>Dota Stats Tracker</strong> — мониторинг матчей друзей 😁</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Контакты</h2>
+  <p>📧 Email: <a href="mailto:maxvarf@example.com">maxvarf@example.com</a></p>
+  <p>🐙 GitHub: <a href="https://github.com/username" target="_blank">@username</a></p>
+</section>
+
+
+<footer>
+  © 2025 Максим Варфоломеев — код, кофе и криты с далика
+</footer>
+
+<!-- Звук First Blood -->
+<audio id="firstBlood" preload="auto">
+  <source src="https://cdn.pixabay.com/audio/2023/05/08/audio_6d2f8e6b85.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const sound = document.getElementById('firstBlood');
+    sound.volume = 0.4;
+    setTimeout(() => sound.play().catch(() => {}), 1000);
+  });
+</script>
+
+</body>
+</html>
